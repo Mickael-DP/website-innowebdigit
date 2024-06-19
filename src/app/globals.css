@@ -15,7 +15,7 @@
     #0885ff33 55deg,
     #54d6ff33 120deg,
     #0071ff33 160deg,
-    transparent 360deg
+    transparent 360degx
   );
   --secondary-glow: radial-gradient(
     rgba(255, 255, 255, 1),
@@ -42,7 +42,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 25x5, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
 
