@@ -2,12 +2,17 @@
 
 import { Card, CardContent } from '@mui/joy';
 import { Box } from '@mui/material';
+import { StaticImageData } from 'next/image';
+
 
 interface TechCardProps {
-    logoTech: string;
-}
+	card: {
+	  id: number;
+	  logoTech: StaticImageData;
+	};
+  }
 
-const TechCard: React.FC<TechCardProps> = ({ logoTech }) => {
+const TechCard: React.FC<TechCardProps> = ({ card }) => {
 	return (
 		<Card
 			variant='solid'
@@ -29,7 +34,7 @@ const TechCard: React.FC<TechCardProps> = ({ logoTech }) => {
 				}}>
 				<Box
 					component='img'
-					src={logoTech}
+					src={card.logoTech.src}
 					alt='Logo'
 					sx={{
 						width: '70px', 
