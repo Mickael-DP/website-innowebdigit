@@ -39,7 +39,7 @@ const TechCarousel = () => {
         <Box sx={{ width: '100%', my:10}}>
           <Slider {...settings}>
             {cards.map((card) => (
-              <TechCard card={card} />
+              <TechCard key={card.id} card={card} />
             ))}
           </Slider>
         </Box>
