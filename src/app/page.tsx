@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import TechCarousel from "./components/TechCarousel/TechCarousel";
+import Expertise from "./components/Expertise/Expertise";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
      <Navbar />
      <Hero />
      <TechCarousel />
+     <Expertise />
     </main>
   );
 }
