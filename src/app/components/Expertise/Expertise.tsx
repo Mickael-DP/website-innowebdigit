@@ -18,7 +18,7 @@ const Expertise = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
 					width: '100%',
-					padding: '0 150px',
+					paddingX:25,
                 }}
             >
                 <Grid container spacing={5} justifyContent='center' mb={5}>
@@ -41,8 +41,8 @@ const Expertise = () => {
                             Mon expertise web à votre disposition
                         </Typography>
                         <Typography variant='body1' gutterBottom color='white'>
-                            Besoin d'un développeur web spécialiste pour des missions ponctuelles ? <br />
-                            Je suis là pour répondre à tous ces besoins spécifiques.
+						Besoin d&apos;un développeur web spécialiste pour des missions ponctuelles ? <br />
+						Je suis là pour répondre à tous ces besoins spécifiques.
                         </Typography>
                     </Grid>
 					</Grid>
