@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import TechCarousel from "./components/TechCarousel/TechCarousel";
 import Expertise from "./components/Expertise/Expertise";
+import About from "./components/About/About";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
      <Hero />
      <TechCarousel />
      <Expertise />
+     <About />
     </main>
   );
 }
