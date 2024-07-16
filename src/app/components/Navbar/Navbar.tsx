@@ -12,6 +12,7 @@ import {
 	ListItemText,
 	AppBar,
 	Toolbar,
+	Container,
 } from '@mui/material';
 import Button from '@mui/joy/Button';
 import ArticleIcon from '@mui/icons-material/Article';
@@ -72,6 +73,7 @@ const Navbar = (props: Props) => {
 		window !== undefined ? () => window().document.body : undefined;
 
 	return (
+	
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
 			<AppBar
@@ -80,8 +82,9 @@ const Navbar = (props: Props) => {
 				<Toolbar
 					sx={{
 						display: 'flex',
-						justifyContent: 'space-around',
+						justifyContent: 'space-between',
 						alignItems: 'center',
+						mx: 21,
 					}}>
 					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
 						<img
@@ -119,7 +122,7 @@ const Navbar = (props: Props) => {
 					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
 						<Button
 							variant='solid'
-							sx={{ backgroundColor: '#59E2E8' }}
+							sx={{ backgroundColor: '#59E2E8', color:'#000000'}}
 							endDecorator={<ArticleIcon />}>
 							ME CONTACTER
 						</Button>
@@ -148,6 +151,7 @@ const Navbar = (props: Props) => {
 				</Drawer>
 			</nav>
 		</Box>
+		
 	);
 };
 

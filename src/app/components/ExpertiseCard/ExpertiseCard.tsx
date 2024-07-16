@@ -16,7 +16,6 @@ const ExpertiseCard: React.FC<ExpertiseCardProps> = ({ icon, title, description 
 				backgroundColor: '#181818',
 				width: '287px',
 				height: '291px',
-			
                 border: '2px solid #3C3C3C',
                 borderRadius: '0px',
 			}}>
@@ -24,13 +23,11 @@ const ExpertiseCard: React.FC<ExpertiseCardProps> = ({ icon, title, description 
 				sx={{
 					display: 'flex',
                     flexDirection: 'column',
-					
 				}}>
 				<Box
                     sx={{
                         color: '#59E2E8',
-                        fontSize: '2rem',
-               
+                        
                     }}>
                     {icon}
                 </Box>

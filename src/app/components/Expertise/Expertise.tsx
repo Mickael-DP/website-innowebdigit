@@ -24,14 +24,14 @@ const Expertise = () => {
                 <Grid container spacing={5} justifyContent='center' mb={5}>
                     <Grid item xs={12} sm={6} md={3}>
                         <ExpertiseCard
-                            icon={<AutoAwesomeIcon />}
+                            icon={<AutoAwesomeIcon sx={{ fontSize:'3em', marginBottom:'30px'}} />}
                             title='Développement Front-end'
                             description="Permettre aux utilisateurs d'interagir de manière intuitive et fluide avec mes sites"
                         />
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <ExpertiseCard
-                            icon={<SettingsIcon />}
+                            icon={<SettingsIcon sx={{ fontSize:'3em', marginBottom:'30px'}}   />}
                             title='Développement Back-end'
                             description="Concevoir des systèmes solides et performants pour gérer vos données"
                         />
@@ -49,28 +49,28 @@ const Expertise = () => {
 					<Grid container spacing={5} justifyContent='center'>
                     <Grid item xs={12} sm={6} md={3}>
                         <ExpertiseCard
-                            icon={<BrushIcon />}
+                            icon={<BrushIcon sx={{ fontSize:'3em', marginBottom:'30px'}}/>}
                             title='UX / UI'
                             description="Créer des interfaces attractives et faciles à utiliser"
                         />
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <ExpertiseCard
-                            icon={<SmartphoneIcon />}
+                            icon={<SmartphoneIcon sx={{ fontSize:'3em', marginBottom:'30px'}} />}
                             title='Responsive'
                             description="Assurer une expérience fluide sur tous les appareils"
                         />
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <ExpertiseCard
-                            icon={<SearchIcon />}
+                            icon={<SearchIcon sx={{ fontSize:'3em', marginBottom:'30px'}}  />}
                             title='SEO'
                             description="Optimiser votre site pour les moteurs de recherche et améliorer sa visibilité"
                         />
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <ExpertiseCard
-                            icon={<BuildIcon />}
+                            icon={<BuildIcon sx={{ fontSize:'3em', marginBottom:'30px'}} />}
                             title='CMS'
                             description="Permettre aux utilisateurs de gérer le contenu facilement et efficacement"
                         />

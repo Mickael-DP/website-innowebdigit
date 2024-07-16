@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
 						<Button
 							variant='solid'
                             size='lg'
-							sx={{ backgroundColor: '#59E2E8' }}
+							sx={{ backgroundColor: '#59E2E8', color:'#000000' }}
 							>
 							Demander un devis
 						</Button>

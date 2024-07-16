@@ -8,7 +8,7 @@ const About = () => {
             display: 'flex',
             justifyContent: 'space-around',
             paddingX:25,
-            mt: 5,
+            mt: 8,
             width: '100%',
         }}>
 			<Box sx={{
