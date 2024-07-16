@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Button from '@mui/joy/Button';
 import imgHero from '../../assets/imgHero.jpg';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import SendIcon from '@mui/icons-material/Send';
 
 const Hero: React.FC = () => {
 	return (
@@ -46,18 +48,26 @@ const Hero: React.FC = () => {
 					}}>
 					<Typography
 						variant='h3'
-						component='h1'>
-						Bienvenue chez <br /> 
-                        <span style={{ color: '#59E2E8' }}>InnoWeb Digital</span>
+						component='h1'
+						fontFamily='Fire Sans, sans-serif'
+						fontWeight='300'>
+					BIENVENUE <br/> CHEZ <br /> 
+                        <span style={{ color: '#59E2E8', fontWeight:'800' }}>INNOWEB DIGITAL</span>
 					</Typography>
 					<Typography
 						variant='h5'
-						component='h2'>
+						component='h2'
+						fontFamily='Fira Sans, sans-serif'
+						fontWeight='100'
+						marginTop='30px'>
 						Votre Développeur web freelance
 					</Typography>
 					<Typography
 						variant='h5'
-						component='h2'>
+						component='h2'
+						fontFamily='Fira Sans, sans-serif'
+						fontWeight='100'
+						marginBottom='30px'>
 						Prêt a améliorer ton expérence digital en fonction de tes besoins
 					</Typography>
 					<Box
@@ -72,14 +82,14 @@ const Hero: React.FC = () => {
                             size='lg'
 							sx={{ backgroundColor: '#181818', mr: 5 }}
 							>
-							Me découvrir
+							Me découvrir <ArrowDownwardIcon sx={{ml: 1}} />
 						</Button>
 						<Button
 							variant='solid'
                             size='lg'
 							sx={{ backgroundColor: '#59E2E8', color:'#000000' }}
 							>
-							Demander un devis
+							Demander un devis <SendIcon sx={{ml: 1}} />
 						</Button>
 					</Box>
 				</Box>

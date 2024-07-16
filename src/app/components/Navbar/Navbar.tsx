@@ -25,7 +25,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Accueil', 'Expertise', 'A propos', 'Avis'];
+const navItems = ['Accueil', 'Expertise', 'A propos'];
 
 const Navbar = (props: Props) => {
 	const { window } = props;
@@ -114,19 +114,18 @@ const Navbar = (props: Props) => {
 								variant='plain'
 								size='lg'
 								key={item}
-								sx={{ color: '#fff' }}>
+								sx={{ color: '#fff', fontFamily: 'Fira Sans, sans-serif', fontWeight: '500' }}>
 								{item}
 							</Button>
 						))}
-					</Box>
-					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-						<Button
+							<Button
 							variant='solid'
-							sx={{ backgroundColor: '#59E2E8', color:'#000000'}}
+							sx={{ backgroundColor: '#59E2E8', color:'#000000', fontFamily: 'Fira Sans, sans-serif', fontWeight: 'bold'}}
 							endDecorator={<ArticleIcon />}>
 							ME CONTACTER
 						</Button>
 					</Box>
+				
 				</Toolbar>
 			</AppBar>
 			<nav>
@@ -146,6 +145,7 @@ const Navbar = (props: Props) => {
 							backgroundColor: '#000',
 						},
 						backgroundColor: '#000',
+						fontFamily: 'Fira Sans, sans-serif', fontWeight: 'bold'
 					}}>
 					{drawer}
 				</Drawer>

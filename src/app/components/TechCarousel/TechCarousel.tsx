@@ -16,7 +16,6 @@ import logoCss from '../../assets/logoTech/logoCSS.png';
 import logoBootstrap from '../../assets/logoTech/logoBootstrap.svg.png';
 import logoReact from '../../assets/logoTech/logoReact.svg.png';
 import logoStrapi from '../../assets/logoTech/logoStrapi.svg';
-import { lazy } from 'react';
 
 const cards = [
 	{ id: 1, logoTech: logoWordpress },
