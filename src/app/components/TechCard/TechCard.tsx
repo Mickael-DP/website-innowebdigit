@@ -37,7 +37,7 @@ const TechCard: React.FC<TechCardProps> = ({ card }) => {
 					src={card.logoTech.src}
 					alt='Logo'
 					sx={{
-						width: '70px', 
+						width: '100px', 
 						height: 'auto',
 					}}
 				/>
