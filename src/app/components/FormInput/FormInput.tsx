@@ -11,7 +11,7 @@ interface FormInputProps {
 const FormInput = ({ label, required, type, placeholder }: FormInputProps) => (
 	<FormControl
 		required={required}
-		size='md'
+		size='lg'
 		color='neutral'>
 		<FormLabel sx={{color: 'white'}}>{label}</FormLabel>
 		<Input

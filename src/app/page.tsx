@@ -5,6 +5,8 @@ import Hero from "./components/Hero/Hero";
 import TechCarousel from "./components/TechCarousel/TechCarousel";
 import Expertise from "./components/Expertise/Expertise";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
      <TechCarousel />
      <Expertise />
      <About />
+     <Contact />
+     <Footer />
     </main>
   );
 }
