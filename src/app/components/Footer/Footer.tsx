@@ -14,17 +14,17 @@ const Footer = () => {
 					<img
 						src={logoFooter.src}
 						alt='logo Innowebdigital'
-						style={{ width: '480px', height: 'auto' }}
+						style={{ width: '100%', maxWidth: '480px', height: 'auto' }}
 					/>
 				</Box>
 				<Box
 					display='flex'
+					flexDirection={{ xs: 'column', sm: 'row' }}
 					justifyContent='space-around'
+					alignItems='center'
 					sx={{ mt: 5 }}>
-					<Box>
-						<Box
-							display='flex'
-							alignItems='center'>
+					<Box sx={{ mb: { xs: 3, sm: 0 } }}>
+						<Box display='flex' alignItems='center'>
 							<EmailIcon sx={{ color: '#63DFE6' }} />
 							<Typography
 								variant='body2'
@@ -34,10 +34,8 @@ const Footer = () => {
 						</Box>
 						<Divider sx={{ background: '#262626', mt: 1 }} />
 					</Box>
-					<Box>
-						<Box
-							display='flex'
-							alignItems='center'>
+					<Box sx={{ mb: { xs: 3, sm: 0 } }}>
+						<Box display='flex' alignItems='center'>
 							<PhoneIcon sx={{ color: '#63DFE6' }} />
 							<Typography
 								variant='body2'
@@ -48,13 +46,11 @@ const Footer = () => {
 						<Divider sx={{ background: '#262626', mt: 1 }} />
 					</Box>
 					<Box>
-						<Box
-							display='flex'
-							alignItems='center'>
+						<Box display='flex' alignItems='center'>
 							<LocationOnIcon sx={{ color: '#63DFE6' }} />
 							<Typography
 								variant='body2'
-								sx={{ pl: 1, fontFamily: 'Fira Sans, sans-serif'}}>
+								sx={{ pl: 1, fontFamily: 'Fira Sans, sans-serif' }}>
 								Pégomas, France
 							</Typography>
 						</Box>
@@ -64,13 +60,16 @@ const Footer = () => {
 
 				<Box
 					display='flex'
+					flexDirection={{ xs: 'column', sm: 'row' }}
 					justifyContent='space-around'
+					alignItems='center'
 					sx={{ mt: 5 }}>
 					<Typography
 						variant='body1'
 						sx={{
 							fontFamily: 'Fira Sans, sans-serif',
 							fontWeight: '800',
+							mb: { xs: 2, sm: 0 },
 						}}>
 						Développement Frontend
 					</Typography>
@@ -79,6 +78,7 @@ const Footer = () => {
 						sx={{
 							fontFamily: 'Fira Sans, sans-serif',
 							fontWeight: '800',
+							mb: { xs: 2, sm: 0 },
 						}}>
 						Développement Backend
 					</Typography>
@@ -87,6 +87,7 @@ const Footer = () => {
 						sx={{
 							fontFamily: 'Fira Sans, sans-serif',
 							fontWeight: '800',
+							mb: { xs: 2, sm: 0 },
 						}}>
 						UX/UI
 					</Typography>
@@ -95,6 +96,7 @@ const Footer = () => {
 						sx={{
 							fontFamily: 'Fira Sans, sans-serif',
 							fontWeight: '800',
+							mb: { xs: 2, sm: 0 },
 						}}>
 						SEO
 					</Typography>
@@ -103,6 +105,7 @@ const Footer = () => {
 						sx={{
 							fontFamily: 'Fira Sans, sans-serif',
 							fontWeight: '800',
+							mb: { xs: 2, sm: 0 },
 						}}>
 						CMS
 					</Typography>
@@ -118,26 +121,25 @@ const Footer = () => {
 
 				<Box
 					display='flex'
-					justifyContent='center'
+					flexDirection={{ xs: 'row', sm: 'row' }}
+					justifyContent={{ xs: 'space-between', sm: 'center' }}
+					alignItems='center'
 					sx={{ mt: 3 }}>
 					<Box>
 						<Typography
-							variant='body2'
-							sx={{ color: '#828282' }}>
+							sx={{ color: '#828282', fontSize: {xs: '0.7rem', sm:'1rem'}}}>
 							© 2024 Innowebdigital
 						</Typography>
 					</Box>
-					<Box sx={{ mx: 2 }}>
+					<Box>
 						<Typography
-							variant='body2'
-							sx={{ color: '#828282' }}>
+							sx={{ color: '#828282', fontSize: {xs: '0.7rem', sm:'1rem'}, mx:{xs:0, sm:3}}}>
 							Mentions légales
 						</Typography>
 					</Box>
 					<Box>
 						<Typography
-							variant='body2'
-							sx={{ color: '#828282' }}>
+				sx={{ color: '#828282', fontSize: {xs: '0.7rem', sm:'1rem'}}}>
 							Politique de confidentialité
 						</Typography>
 					</Box>
@@ -146,4 +148,5 @@ const Footer = () => {
 		</Box>
 	);
 };
+
 export default Footer;

@@ -89,8 +89,9 @@ const Hero: React.FC = () => {
 							},
 							display: { xs: 'flex', sm: 'flex' },
 							flexDirection: { xs: 'column', sm: 'row' },
+							justifyContent: { sm: 'center' },
 							alignItems: { xs: 'center', sm: 'center' },
-							marginX: { xs: '30px' },
+							marginX: { xs: '30px', sm:'auto' },
 						}}>
 						<Button
 							variant='solid'
