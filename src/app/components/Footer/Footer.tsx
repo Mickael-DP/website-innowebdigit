@@ -7,146 +7,120 @@ import Link from 'next/link';
 import logoFooter from '../../assets/IMG_3431-removebg-preview.png';
 
 const Footer = () => {
-	return (
-		<Box sx={{ bgcolor: 'black', color: 'white', py: 3 }}>
-			<Container>
-				<Box textAlign='center'>
-					<img
-						src={logoFooter.src}
-						alt='logo Innowebdigital'
-						style={{ width: '100%', maxWidth: '480px', height: 'auto' }}
-					/>
-				</Box>
-				<Box
-					display='flex'
-					flexDirection={{ xs: 'column', sm: 'row' }}
-					justifyContent='space-around'
-					alignItems='center'
-					sx={{ mt: 5 }}>
-					<Box sx={{ mb: { xs: 3, sm: 0 } }}>
-						<Box display='flex' alignItems='center'>
-							<EmailIcon sx={{ color: '#63DFE6' }} />
-							<Typography
-								variant='body2'
-								sx={{ pl: 1, fontFamily: 'Fira Sans, sans-serif' }}>
-								contact@innowebdigital.com
-							</Typography>
-						</Box>
-						<Divider sx={{ background: '#262626', mt: 1 }} />
-					</Box>
-					<Box sx={{ mb: { xs: 3, sm: 0 } }}>
-						<Box display='flex' alignItems='center'>
-							<PhoneIcon sx={{ color: '#63DFE6' }} />
-							<Typography
-								variant='body2'
-								sx={{ pl: 1, fontFamily: 'Fira Sans, sans-serif' }}>
-								+33 6 22 22 44 15
-							</Typography>
-						</Box>
-						<Divider sx={{ background: '#262626', mt: 1 }} />
-					</Box>
-					<Box>
-						<Box display='flex' alignItems='center'>
-							<LocationOnIcon sx={{ color: '#63DFE6' }} />
-							<Typography
-								variant='body2'
-								sx={{ pl: 1, fontFamily: 'Fira Sans, sans-serif' }}>
-								Pégomas, France
-							</Typography>
-						</Box>
-						<Divider sx={{ background: '#262626', mt: 1 }} />
-					</Box>
-				</Box>
+    return (
+        <Box sx={{ bgcolor: 'black', color: 'white', py: 3 }}>
+            <Container maxWidth='lg'>
+                <Grid container spacing={4} direction="column" alignItems="center">
+                    <Grid item xs={12} textAlign='center'>
+                        <img
+                            src={logoFooter.src}
+                            alt='logo Innowebdigital'
+                            style={{ width: '100%', maxWidth: '480px', height: 'auto' }}
+                        />
+                    </Grid>
 
-				<Box
-					display='flex'
-					flexDirection={{ xs: 'column', sm: 'row' }}
-					justifyContent='space-around'
-					alignItems='center'
-					sx={{ mt: 5 }}>
-					<Typography
-						variant='body1'
-						sx={{
-							fontFamily: 'Fira Sans, sans-serif',
-							fontWeight: '800',
-							mb: { xs: 2, sm: 0 },
-						}}>
-						Développement Frontend
-					</Typography>
-					<Typography
-						variant='body1'
-						sx={{
-							fontFamily: 'Fira Sans, sans-serif',
-							fontWeight: '800',
-							mb: { xs: 2, sm: 0 },
-						}}>
-						Développement Backend
-					</Typography>
-					<Typography
-						variant='body1'
-						sx={{
-							fontFamily: 'Fira Sans, sans-serif',
-							fontWeight: '800',
-							mb: { xs: 2, sm: 0 },
-						}}>
-						UX/UI
-					</Typography>
-					<Typography
-						variant='body1'
-						sx={{
-							fontFamily: 'Fira Sans, sans-serif',
-							fontWeight: '800',
-							mb: { xs: 2, sm: 0 },
-						}}>
-						SEO
-					</Typography>
-					<Typography
-						variant='body1'
-						sx={{
-							fontFamily: 'Fira Sans, sans-serif',
-							fontWeight: '800',
-							mb: { xs: 2, sm: 0 },
-						}}>
-						CMS
-					</Typography>
-				</Box>
-				<Box
-					display='flex'
-					justifyContent='center'
-					sx={{ mt: 5 }}>
-					<Instagram sx={{ color: '#63DFE6' }} />
-					<Facebook sx={{ mx: 2, color: '#63DFE6' }} />
-					<Twitter sx={{ color: '#63DFE6' }} />
-				</Box>
+                    <Grid item xs={12} container spacing={4} justifyContent='space-between'>
+                        <Grid item xs={12} sm={4} textAlign={{ xs: 'center', sm: 'center' }}>
+                            <Box display='flex' justifyContent={{ xs: 'center', sm: 'flex-end' }} alignItems='center'>
+                                <EmailIcon sx={{ color: '#63DFE6' }} />
+                                <Typography variant='body2' sx={{ ml: 1, fontFamily: 'Fira Sans, sans-serif' }}>
+                                    contact@innowebdigital.com
+                                </Typography>
+								<Divider sx={{ background: '#262626', mt: 1 }} />
+                            </Box>
+                        
+                        </Grid>
 
-				<Box
-					display='flex'
-					flexDirection={{ xs: 'row', sm: 'row' }}
-					justifyContent={{ xs: 'space-between', sm: 'center' }}
-					alignItems='center'
-					sx={{ mt: 3 }}>
-					<Box>
-						<Typography
-							sx={{ color: '#828282', fontSize: {xs: '0.7rem', sm:'1rem'}}}>
-							© 2024 Innowebdigital
-						</Typography>
-					</Box>
-					<Box>
-						<Typography
-							sx={{ color: '#828282', fontSize: {xs: '0.7rem', sm:'1rem'}, mx:{xs:0, sm:3}}}>
-							Mentions légales
-						</Typography>
-					</Box>
-					<Box>
-						<Typography
-				sx={{ color: '#828282', fontSize: {xs: '0.7rem', sm:'1rem'}}}>
-							Politique de confidentialité
-						</Typography>
-					</Box>
-				</Box>
-			</Container>
-		</Box>
-	);
+                        <Grid item xs={12} sm={4} textAlign={{ xs: 'center', sm: 'center' }}>
+                            <Box display='flex' justifyContent={{ xs: 'center', sm: 'center' }} alignItems='center'>
+                                <PhoneIcon sx={{ color: '#63DFE6', p: 0, mr: 1 }} />
+			
+								<Typography variant='body2' sx={{ fontFamily: 'Fira Sans, sans-serif' }}>
+                                    +33 6 22 22 44 15
+                                </Typography>
+								
+			
+                              
+							
+                            </Box>
+					
+                        </Grid>
+
+                        <Grid item xs={12} sm={4} textAlign={{ xs: 'center', sm: 'center' }}>
+                            <Box display='flex' justifyContent={{ xs: 'center', sm: 'flex-start' }} alignItems='center'>
+                                <LocationOnIcon sx={{ color: '#63DFE6' }} />
+                                <Typography variant='body2' sx={{ pl: 1, fontFamily: 'Fira Sans, sans-serif' }}>
+                                    Pégomas, France
+                                </Typography>
+								<Divider sx={{ background: '#262626', mt: 1 }} />
+                            </Box>
+                            
+                        </Grid>
+
+                    </Grid>
+					<Divider sx={{ background: '#262626', mt: 3, width:'100%'}} />
+                    <Grid item xs={12} container spacing={4} flexDirection={{xs:'column', sm:'row'}} textAlign='center' justifyContent={{ xs: 'center', sm:'space-around'}}>
+                        <Grid item>
+                            <Typography variant='body1' sx={{ fontFamily: 'Fira Sans, sans-serif', fontWeight: '800' }}>
+                                Développement Frontend
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography variant='body1' sx={{ fontFamily: 'Fira Sans, sans-serif', fontWeight: '800' }}>
+                                Développement Backend
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography variant='body1' sx={{ fontFamily: 'Fira Sans, sans-serif', fontWeight: '800' }}>
+                                UX/UI
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography variant='body1' sx={{ fontFamily: 'Fira Sans, sans-serif', fontWeight: '800' }}>
+                                SEO
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography variant='body1' sx={{ fontFamily: 'Fira Sans, sans-serif', fontWeight: '800' }}>
+                                CMS
+                            </Typography>
+                        </Grid>
+                    </Grid>
+
+                    <Grid item xs={12} container justifyContent='center' spacing={3}>
+                        <Grid item>
+                            <Instagram sx={{ color: '#63DFE6' }} />
+                        </Grid>
+                        <Grid item>
+                            <Facebook sx={{ color: '#63DFE6' }} />
+                        </Grid>
+                        <Grid item>
+                            <Twitter sx={{ color: '#63DFE6' }} />
+                        </Grid>
+                    </Grid>
+
+                    <Grid item xs={12} container justifyContent={{ xs: 'center', sm: 'center' }} spacing={{xs:'12', sm:'15'}}>
+						<Grid item>
+							<Typography sx={{ color: '#828282', fontSize: { xs: '0.7rem', sm: '1rem' },  }}>
+								© 2024 Innowebdigital
+							</Typography>
+						</Grid>
+                   
+                        <Grid item >
+                            <Typography sx={{ color: '#828282', fontSize: { xs: '0.7rem', sm: '1rem' },  }}>
+                                Mentions légales
+                            </Typography>
+                        </Grid>
+						<Grid item >
+							<Typography sx={{ color: '#828282', fontSize: { xs: '0.7rem', sm: '1rem' },  }}>
+								Politique de confidentialité
+							</Typography>
+							</Grid>
+                    </Grid>
+                </Grid>
+            </Container>
+        </Box>
+    );
 };
 
 export default Footer;
