@@ -1,6 +1,6 @@
 'use client';
 
-import { Box } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import TechCard from '../TechCard/TechCard';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -32,10 +32,14 @@ const cards = [
 ];
 
 const TechCarousel = () => {
+	const theme = useTheme();
+	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+	const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+
 	const settings = {
 		dots: false,
 		infinite: true,
-		slidesToShow: 5,
+		slidesToShow: isMobile ? 2 : isTablet ? 3 : 5,
 		slidesToScroll: 1,
 		autoplay: true,
 		speed: 5000,

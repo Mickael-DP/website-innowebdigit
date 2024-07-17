@@ -17,13 +17,43 @@ const Expertise = () => {
 				flexDirection: 'column',
 				alignItems: 'center',
 				width: '100%',
-				paddingX: 25,
+				paddingX: { xs: 7, sm: 25 },
 			}}>
 			<Grid
 				container
 				spacing={5}
 				justifyContent='center'
 				mb={5}>
+					<Grid
+					sx={{display:{xs:'block',sm:'none',md:'none'}}}
+					item
+					xs={12}
+					sm={6}
+					md={6}
+					justifyContent='center'>
+					<Typography
+						variant='h4'
+						gutterBottom
+                        sx={{
+                            fontFamily: 'Fira Sans, sans-serif',
+                            fontWeight: '800',
+                        }}
+						color='white'>
+						Mon Expertise Web à votre disposition
+					</Typography>
+					<Typography
+						variant='body1'
+						gutterBottom
+                        sx={{
+                            fontFamily: 'Fira Sans, sans-serif',
+                            fontWeight: '500',
+                        }}
+						color='#63DFE6'>
+						Besoin d&apos;un développeur web spécialiste pour des missions
+						ponctuelles ? <br />
+						Je suis là pour répondre à tous ces besoins spécifiques.
+					</Typography>
+				</Grid>
 				<Grid
 					item
 					xs={12}
@@ -48,6 +78,7 @@ const Expertise = () => {
 				</Grid>
 				<Grid
 					item
+					sx={{display:{xs:'none',sm:'block',md:'block'}}}
 					xs={12}
 					sm={6}
 					md={6}

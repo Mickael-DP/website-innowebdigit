@@ -12,13 +12,12 @@ import {
 	ListItemText,
 	AppBar,
 	Toolbar,
-	Container,
 } from '@mui/material';
 import Button from '@mui/joy/Button';
 import ArticleIcon from '@mui/icons-material/Article';
-import DragHandleIcon from '@mui/icons-material/DragHandle';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import React from 'react';
-import logoSite from '../../assets/IMG_3431-removebg-preview.png';
+import logoSite from '../../assets/Logoentreprise.png';
 
 interface Props {
 	window?: () => Window;
@@ -73,7 +72,6 @@ const Navbar = (props: Props) => {
 		window !== undefined ? () => window().document.body : undefined;
 
 	return (
-	
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
 			<AppBar
@@ -82,9 +80,9 @@ const Navbar = (props: Props) => {
 				<Toolbar
 					sx={{
 						display: 'flex',
-						justifyContent: 'space-between',
-						alignItems: 'center',
-						mx: 21,
+						justifyContent: { sm: 'space-between', xs: 'space-between' },
+						alignItems: { sm: 'center', xs: 'center' },
+						mx: { sm: 21, xs: 1 },
 					}}>
 					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
 						<img
@@ -93,39 +91,51 @@ const Navbar = (props: Props) => {
 							style={{ width: '400px', height: 'auto' }}
 						/>
 					</Box>
+
+					<Box sx={{ mr: 1, display: { sm: 'none', xs: 'block' } }}>
+						<IconButton
+							color='inherit'
+							aria-label='open drawer'
+							edge='start'
+							onClick={handleDrawerToggle}>
+							<MenuRoundedIcon />
+						</IconButton>
+					</Box>
+
 					<Box sx={{ display: { xs: 'block', sm: 'none' } }}>
 						<img
 							src={logoSite.src}
 							alt='logo'
-							style={{ width: '200px', height: 'auto' }}
+							style={{ width: '170px', height: 'auto' }}
 						/>
 					</Box>
-					<IconButton
-						color='inherit'
-						aria-label='open drawer'
-						edge='end'
-						onClick={handleDrawerToggle}
-						sx={{ mr: 1, display: { sm: 'none' } }}>
-						<DragHandleIcon />
-					</IconButton>
+
 					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
 						{navItems.map((item) => (
 							<Button
 								variant='plain'
 								size='lg'
 								key={item}
-								sx={{ color: '#fff', fontFamily: 'Fira Sans, sans-serif', fontWeight: '500' }}>
+								sx={{
+									color: '#fff',
+									fontFamily: 'Fira Sans, sans-serif',
+									fontWeight: '500',
+								}}>
 								{item}
 							</Button>
 						))}
-							<Button
+						<Button
 							variant='solid'
-							sx={{ backgroundColor: '#59E2E8', color:'#000000', fontFamily: 'Fira Sans, sans-serif', fontWeight: 'bold'}}
+							sx={{
+								backgroundColor: '#59E2E8',
+								color: '#000000',
+								fontFamily: 'Fira Sans, sans-serif',
+								fontWeight: 'bold',
+							}}
 							endDecorator={<ArticleIcon />}>
 							ME CONTACTER
 						</Button>
 					</Box>
-				
 				</Toolbar>
 			</AppBar>
 			<nav>
@@ -145,13 +155,13 @@ const Navbar = (props: Props) => {
 							backgroundColor: '#000',
 						},
 						backgroundColor: '#000',
-						fontFamily: 'Fira Sans, sans-serif', fontWeight: 'bold'
+						fontFamily: 'Fira Sans, sans-serif',
+						fontWeight: 'bold',
 					}}>
 					{drawer}
 				</Drawer>
 			</nav>
 		</Box>
-		
 	);
 };
 
