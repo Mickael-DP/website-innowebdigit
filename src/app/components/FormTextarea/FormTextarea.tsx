@@ -12,14 +12,15 @@ const FormTextarea = ({ label, required, placeholder }: FormTextareaProps) => (
 		required={required}
 		size='md'
 		color='neutral'>
-		<FormLabel sx={{color: 'white'}}>{label}</FormLabel>
+		<FormLabel sx={{color: 'white', fontFamily: 'Fira Sans, sans-serif'}}>{label}</FormLabel>
 		<Textarea
             aria-label={label}
 			placeholder={placeholder}
             size='lg'
 			name={label}
-            minRows={4}
+            minRows={5}
 			variant='soft'
+			sx={{fontFamily: 'Fira Sans, sans-serif'}}
 		/>
 	</FormControl>
 );

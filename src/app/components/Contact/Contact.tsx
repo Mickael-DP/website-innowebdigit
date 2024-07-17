@@ -18,8 +18,17 @@ const Contact = () => {
 					color: 'white',
                   paddingX: 25,
 				}}>
-				<Typography variant='h4'>Formulaire</Typography>
-				<Typography variant='h3'>Rentrons en contact </Typography>
+				<Typography variant='h6'  sx={{
+                            fontFamily: 'Fira Sans, sans-serif',
+                            fontWeight: '300',
+							letterSpacing: '0.3em',
+							color: '#59E2E8',
+                        }}>FORMULAIRE</Typography>
+				<Typography variant='h3'
+				 sx={{
+					fontFamily: 'Fira Sans, sans-serif',
+					fontWeight: '800',
+				}}>Entrons en contact</Typography>
 			</Box>
 
 			<Box
@@ -29,17 +38,20 @@ const Contact = () => {
 					justifyContent: 'center',
                     paddingTop: 5,
 				}}>
-                    <Container maxWidth='sm'>
+                    <Container maxWidth='md'>
 				<form>
 					<Box
 						sx={{
 							display: 'flex',
                             justifyContent: 'space-between',
+							gap: 15,
+							marginBottom: 2,
 						}}>
 						<FormInput
 							label='Nom / Prénom'
                             placeholder='Nom / Prénom'
 							type='text'
+					
 						/>
 						<FormInput
 							label='Entité'
@@ -56,6 +68,8 @@ const Contact = () => {
 						sx={{
 							display: 'flex',
                             justifyContent: 'space-between',
+							gap: 15,
+							marginY: 2,
 						}}>
 						<FormInput
 							label='N°Téléphone'
@@ -72,7 +86,7 @@ const Contact = () => {
                     <Button
 							variant='solid'
                             size='lg'
-							sx={{ backgroundColor: '#59E2E8', color: '#181818', marginTop: 2, display: 'block', marginX: 'auto', }}
+							sx={{ backgroundColor: '#59E2E8', color: '#181818', marginTop: 3, display: 'block', marginX: 'auto', fontFamily: 'Fira Sans, sans-serif' }}
 							>
 							Envoyer votre demande
 						</Button>

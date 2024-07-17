@@ -19,14 +19,22 @@ const About = () => {
             }}>
 				<Typography
 					variant='h3'
+					sx={{
+						fontFamily: 'Fira Sans, sans-serif',
+							fontWeight: '800',
+					}}
 					gutterBottom
 					color='white'>
-					À propos de moi
+					À PROPOS DE <span color='#63DFE6'>MOI</span>
 				</Typography>
 				<Typography
 					variant='h6'
+					sx={{
+						fontFamily: 'Fira Sans, sans-serif',
+							fontWeight: '400',
+					}}
 					gutterBottom
-					color='white'>
+					color='#C7C7C7'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id
 					fringilla turpis tempor enim. Vel tristique suspendisse eget sodales
 					egestas. Donec duis lacus, odio velit eu eget ac tortor. Ac sit
@@ -40,7 +48,11 @@ const About = () => {
                 <Typography
 					variant='h6'
 					gutterBottom
-					color='white'>
+					sx={{
+						fontFamily: 'Fira Sans, sans-serif',
+							fontWeight: '400',
+					}}
+					color='#C7C7C7'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id
 					fringilla turpis tempor enim. Vel tristique suspendisse eget sodales
 					egestas. Donec duis lacus, odio velit eu eget ac tortor. Ac sit
@@ -57,6 +69,7 @@ const About = () => {
                         borderRadius: 90,
                         padding:2,
                         color: 'black',
+						fontFamily: 'Fira Sans, sans-serif',
                         fontWeight: 'bold',
                         mr: 2,
 

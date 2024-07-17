@@ -1,5 +1,5 @@
-import { FormControl, FormHelperText, FormLabel, Input } from '@mui/joy';
-import { Box, TextField, Typography } from '@mui/material';
+import { FormControl, FormLabel, Input } from '@mui/joy';
+
 
 interface FormInputProps {
 	label: string;
@@ -12,13 +12,15 @@ const FormInput = ({ label, required, type, placeholder }: FormInputProps) => (
 	<FormControl
 		required={required}
 		size='lg'
-		color='neutral'>
-		<FormLabel sx={{color: 'white'}}>{label}</FormLabel>
+		color='neutral'
+		sx={{width:'100%'}}>
+		<FormLabel sx={{color: 'white', fontFamily: 'Fira Sans, sans-serif'}}>{label}</FormLabel>
 		<Input
 			placeholder={placeholder}
 			name={label}
 			type={type}
 			variant='outlined'
+			sx={{fontFamily: 'Fira Sans, sans-serif'}}
 		/>
 	</FormControl>
 );
