@@ -189,7 +189,7 @@ const Footer = () => {
 						</Grid>
 
 						<Grid item>
-							<Link href='/Mentions-legales'>
+							<Link href='/Mentionslegales'>
 							<Typography
 								sx={{
 									color: '#828282',
@@ -200,7 +200,7 @@ const Footer = () => {
 							</Link>
 						</Grid>
 						<Grid item>
-							<Link href='/Politique-de-confidentialite'>
+							<Link href='/Politiquedeconfidentialite'>
 							<Typography
 								sx={{
 									color: '#828282',
