@@ -1,10 +1,22 @@
+"use client";
+
 import { LinkedIn } from '@mui/icons-material';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Link, Typography } from '@mui/material';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 const About = () => {
+
+	const openCVPDF = () => {
+		// Chemin relatif vers le PDF
+		const pdfPath = '/assets/CVMickaelDALLEPASQUALINE.pdf'; // Assurez-vous que le chemin est correctement défini
+	
+		// Ouvrir le PDF dans une nouvelle fenêtre
+		window.open(pdfPath);
+	  };
+
 	return (
 		<Box
+		id='apropos'
 			sx={{
 				display: 'flex',
 				flexDirection: { xs: 'column', md: 'row' },
@@ -68,7 +80,9 @@ const About = () => {
 					fames sit lectus. Scelerisque id bibendum velit cras.
 				</Typography>
 				<Box sx={{ display: { xs: 'flex' }, mx: { xs: 1 } }}>
+	
 					<Button
+						onClick={openCVPDF}
 						sx={{
 							backgroundColor: '#59E2E8',
 							borderRadius: 90,
@@ -78,10 +92,16 @@ const About = () => {
 							fontWeight: 'bold',
 							mr: 2,
 							fontSize: { xs: '0.8rem', sm: '1rem', md: '1rem' },
+							'&:hover': {
+											backgroundColor: '#59E2E8',
+											color: '#ffffff',
+										},
 						}}
 						endIcon={<FileDownloadIcon />}>
 						Télécharger mon CV -
 					</Button>
+			
+					<Link href="https://www.linkedin.com/in/mickael-dalle-pasqualine/" target="_blank" rel="noopener noreferrer">
 					<Button
 						sx={{
 							backgroundColor: '#181818',
@@ -90,9 +110,14 @@ const About = () => {
 							color: '#59E2E8',
 							fontWeight: 'bold',
 							fontSize: { xs: '0.8rem', sm: '1rem', md: '1rem' },
+							'&:hover': {
+											backgroundColor: '#59E2E8',
+											color: '#ffffff',
+										},
 						}}>
 						<LinkedIn />
 					</Button>
+					</Link>
 				</Box>
 			</Box>
 			<Box sx={{ mt: { xs: 5 } }}>

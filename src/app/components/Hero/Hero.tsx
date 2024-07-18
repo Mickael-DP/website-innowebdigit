@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 import Button from '@mui/joy/Button';
 import imgHero from '../../assets/imgHero.jpg';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -93,6 +93,7 @@ const Hero: React.FC = () => {
 							alignItems: { xs: 'center', sm: 'center' },
 							marginX: { xs: '30px', sm:'auto' },
 						}}>
+							<Link href='#apropos'>
 						<Button
 							variant='solid'
 							size='lg'
@@ -100,9 +101,15 @@ const Hero: React.FC = () => {
 								backgroundColor: '#181818',
 								mr: 5,
 								fontSize: { xs: '0.8rem', sm: '1rem', md: '1rem' },
+								'&:hover': {
+											backgroundColor: '#59E2E8',
+											color: '#ffffff',
+										},
 							}}>
 							Me découvrir <ArrowDownwardIcon sx={{ ml: 1 }} />
 						</Button>
+						</Link>
+						<Link href='#contact'>
 						<Button
 							variant='solid'
 							size='lg'
@@ -110,9 +117,14 @@ const Hero: React.FC = () => {
 								backgroundColor: '#59E2E8',
 								color: '#000000',
 								fontSize: { xs: '0.8rem', sm: '1rem', md: '1rem' },
+								'&:hover': {
+											backgroundColor: '#59E2E8',
+											color: '#ffffff',
+										},
 							}}>
 							Demander un devis <SendIcon sx={{ ml: 1 }} />
 						</Button>
+						</Link>
 					</Box>
 				</Box>
 			</Box>

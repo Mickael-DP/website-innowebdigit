@@ -12,6 +12,7 @@ const Expertise = () => {
 	return (
 		<Box
 			component='div'
+			id='expertise'
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',

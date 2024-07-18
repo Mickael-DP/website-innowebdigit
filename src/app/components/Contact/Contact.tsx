@@ -79,6 +79,7 @@ const Contact: React.FC = () => {
 
   return (
     <Box
+     id='contact'
       sx={{
         backgroundColor: '#181818',
         borderTop: '2px solid #3C3C3C',
@@ -112,6 +113,7 @@ const Contact: React.FC = () => {
       </Box>
 
       <Box
+     
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -200,7 +202,11 @@ const Contact: React.FC = () => {
                 display: 'block',
                 marginX: 'auto',
                 fontFamily: 'Fira Sans, sans-serif',
-                width: { xs: '100%', sm: 'auto' }, // full width on mobile
+                width: { xs: '100%', sm: 'auto' },
+                '&:hover': {
+											backgroundColor: '#59E2E8',
+											color: '#ffffff',
+										}, 
               }}>
               Envoyer votre demande
             </Button>

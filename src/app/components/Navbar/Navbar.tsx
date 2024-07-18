@@ -1,5 +1,7 @@
-'use client';
+"use client";
 
+import React from 'react';
+import Link from 'next/link';
 import {
 	Box,
 	Divider,
@@ -16,7 +18,6 @@ import {
 import Button from '@mui/joy/Button';
 import ArticleIcon from '@mui/icons-material/Article';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import React from 'react';
 import logoSite from '../../assets/Logoentreprise.png';
 
 interface Props {
@@ -24,7 +25,11 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Accueil', 'Expertise', 'A propos'];
+const navItems = [
+	{ text: 'Accueil', href: '#' },
+	{ text: 'Expertise', href: '#expertise' },
+	{ text: 'A propos', href: '#apropos' },
+];
 
 const Navbar = (props: Props) => {
 	const { window } = props;
@@ -48,20 +53,18 @@ const Navbar = (props: Props) => {
 			<Divider sx={{ backgroundColor: 'white', mx: 3 }} />
 			<List>
 				{navItems.map((item) => (
-					<ListItem
-						key={item}
-						disablePadding>
+					<ListItem key={item.text} disablePadding>
 						<ListItemButton sx={{ textAlign: 'center' }}>
-							<ListItemText primary={item} />
+							<Link href={`/${item.href.toLowerCase().replace(/\s+/g, '')}`}>
+								<ListItemText primary={item.text} sx={{ color: '#fff' }} />
+							</Link>
 						</ListItemButton>
 					</ListItem>
 				))}
 			</List>
 			<Divider sx={{ backgroundColor: 'white', mb: 2, mx: 3 }} />
 			<Box sx={{ display: 'flex', justifyContent: 'center' }}>
-				<Button
-					variant='solid'
-					sx={{ backgroundColor: '#59E2E8' }}>
+				<Button variant='solid' sx={{ backgroundColor: '#59E2E8' }}>
 					Contact
 				</Button>
 			</Box>
@@ -74,9 +77,7 @@ const Navbar = (props: Props) => {
 	return (
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
-			<AppBar
-				component='nav'
-				sx={{ backgroundColor: '#000' }}>
+			<AppBar component='nav' sx={{ backgroundColor: '#000' }}>
 				<Toolbar
 					sx={{
 						display: 'flex',
@@ -110,31 +111,45 @@ const Navbar = (props: Props) => {
 						/>
 					</Box>
 
-					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+					<Box sx={{ display: { xs: 'none', sm: 'block' },  }}>
 						{navItems.map((item) => (
-							<Button
-								variant='plain'
-								size='lg'
-								key={item}
-								sx={{
-									color: '#fff',
-									fontFamily: 'Fira Sans, sans-serif',
-									fontWeight: '500',
-								}}>
-								{item}
-							</Button>
+							<Link key={item.text} href={`/${item.href.toLowerCase().replace(/\s+/g, '')}`}>
+								<Button
+									variant='plain'
+									size='lg'
+									sx={{
+										color: '#fff',
+										fontFamily: 'Fira Sans, sans-serif',
+										fontWeight: '500',
+										'&:hover': {
+											backgroundColor: '#59E2E8',
+											color: '#000000',
+										},
+
+									}}>
+									{item.text}
+								</Button>
+							</Link>
 						))}
+						<Link href={`/#contact`}>
+						
 						<Button
 							variant='solid'
 							sx={{
+								ml:{sm: 3},
 								backgroundColor: '#59E2E8',
 								color: '#000000',
 								fontFamily: 'Fira Sans, sans-serif',
 								fontWeight: 'bold',
+								'&:hover': {
+											backgroundColor: '#59E2E8',
+											color: '#ffffff',
+										},
 							}}
 							endDecorator={<ArticleIcon />}>
 							ME CONTACTER
 						</Button>
+						</Link>
 					</Box>
 				</Toolbar>
 			</AppBar>
