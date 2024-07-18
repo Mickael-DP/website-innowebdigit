@@ -37,6 +37,17 @@ const Contact: React.FC = () => {
 		});
 	};
 
+    const resetForm = () => {
+        setFormState({
+          name: '',
+          entity: '',
+          email: '',
+          phone: '',
+          country: '',
+          message: '',
+        });
+      };
+
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 
@@ -49,6 +60,7 @@ const Contact: React.FC = () => {
 			)
 			.then((response) => {
 				console.log('SUCCESS!', response.status, response.text);
+                resetForm();
 			
 			})
 			.catch((err) => {
