@@ -2,13 +2,15 @@ import { FormControl, FormLabel, Input } from '@mui/joy';
 
 
 interface FormInputProps {
+	name: string;
 	label: string;
 	placeholder?: string;
 	required?: boolean;
 	type?: 'text' | 'email';
+	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const FormInput = ({ label, required, type, placeholder }: FormInputProps) => (
+const FormInput = ({ name, label, required, type, placeholder }: FormInputProps) => (
 	<FormControl
 		required={required}
 		size='lg'
@@ -17,7 +19,7 @@ const FormInput = ({ label, required, type, placeholder }: FormInputProps) => (
 		<FormLabel sx={{color: 'white', fontFamily: 'Fira Sans, sans-serif'}}>{label}</FormLabel>
 		<Input
 			placeholder={placeholder}
-			name={label}
+			name={name}
 			type={type}
 			variant='outlined'
 			sx={{fontFamily: 'Fira Sans, sans-serif'}}

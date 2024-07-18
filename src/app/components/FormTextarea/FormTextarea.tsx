@@ -2,12 +2,14 @@ import { FormControl,  FormLabel, Textarea } from '@mui/joy';
 
 
 interface FormTextareaProps {
+	name: string;
 	label: string;
 	placeholder?: string;
 	required?: boolean;
+	onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-const FormTextarea = ({ label, required, placeholder }: FormTextareaProps) => (
+const FormTextarea = ({ name, label, required, placeholder }: FormTextareaProps) => (
 	<FormControl
 		required={required}
 		size='md'
@@ -17,7 +19,7 @@ const FormTextarea = ({ label, required, placeholder }: FormTextareaProps) => (
             aria-label={label}
 			placeholder={placeholder}
             size='lg'
-			name={label}
+			name={name}
             minRows={5}
 			variant='soft'
 			sx={{fontFamily: 'Fira Sans, sans-serif'}}
