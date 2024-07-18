@@ -5,7 +5,8 @@ import { Box, Container } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import FormInput from '../FormInput/FormInput';
 import FormTextarea from '../FormTextarea/FormTextarea';
-import { Button } from '@mui/joy';
+import { VariantProp } from '@mui/joy/styles';
+import { Alert, Button, Snackbar } from '@mui/joy';
 import emailjs from '@emailjs/browser';
 
 interface FormState {
@@ -27,6 +28,10 @@ const Contact: React.FC = () => {
     country: '',
     message: '',
   });
+
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+
+  const [variant, setVariant] = React.useState<VariantProp>('soft');
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -60,12 +65,17 @@ const Contact: React.FC = () => {
       )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        resetForm(); // Réinitialiser le formulaire après succès
+        resetForm(); 
+        setSnackbarOpen(true);
       })
       .catch((err) => {
         console.error('FAILED...', err);
       });
   };
+
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
+  }
 
   return (
     <Box
@@ -119,6 +129,7 @@ const Contact: React.FC = () => {
                 marginBottom: 2,
               }}>
               <FormInput
+              required
                 label='Nom / Prénom'
                 placeholder='Nom / Prénom'
                 type='text'
@@ -127,6 +138,7 @@ const Contact: React.FC = () => {
                 onChange={handleChange}
               />
               <FormInput
+              required
                 label='Entité'
                 placeholder='Entité'
                 type='text'
@@ -136,6 +148,7 @@ const Contact: React.FC = () => {
               />
             </Box>
             <FormInput
+            required
               label='Email'
               placeholder='Email'
               type='email'
@@ -169,6 +182,7 @@ const Contact: React.FC = () => {
               />
             </Box>
             <FormTextarea
+            required
               label='Message'
               placeholder='Entrez votre message'
               name='message'
@@ -193,6 +207,15 @@ const Contact: React.FC = () => {
           </form>
         </Container>
       </Box>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+      >
+        <Alert variant={variant} color="success" sx={{ width: '100%' }}>
+          Votre message a été envoyé avec succès !
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };
