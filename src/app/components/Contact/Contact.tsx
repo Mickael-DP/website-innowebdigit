@@ -42,18 +42,17 @@ const Contact: React.FC = () => {
 
 		emailjs
 			.send(
-				'service_contact', // Remplacez par votre service ID
-				'template_contact', // Remplacez par votre template ID
+				'service_contact',
+				'template_contact', 
 				formState,
-				'YOUR_PUBLIC_KEY' // Remplacez par votre public key
+				'HjyopoL0Li5rbTNkE' // Remplacez par votre public key
 			)
 			.then((response) => {
 				console.log('SUCCESS!', response.status, response.text);
-				// Affichez un message de succès ou effectuez une autre action
+			
 			})
 			.catch((err) => {
 				console.error('FAILED...', err);
-				// Affichez un message d'erreur ou effectuez une autre action
 			});
 	};
 
