@@ -6,10 +6,11 @@ interface FormTextareaProps {
 	label: string;
 	placeholder?: string;
 	required?: boolean;
+	value?: string;
 	onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-const FormTextarea = ({ name, label, required, placeholder }: FormTextareaProps) => (
+const FormTextarea = ({ name, label, required, placeholder, onChange, value }: FormTextareaProps) => (
 	<FormControl
 		required={required}
 		size='md'
@@ -18,7 +19,9 @@ const FormTextarea = ({ name, label, required, placeholder }: FormTextareaProps)
 		<Textarea
             aria-label={label}
 			placeholder={placeholder}
+			onChange={onChange}
             size='lg'
+			value={value}
 			name={name}
             minRows={5}
 			variant='soft'

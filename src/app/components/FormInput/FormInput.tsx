@@ -8,9 +8,10 @@ interface FormInputProps {
 	required?: boolean;
 	type?: 'text' | 'email';
 	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	value?: string;
 }
 
-const FormInput = ({ name, label, required, type, placeholder }: FormInputProps) => (
+const FormInput = ({ name, label, required, type, placeholder, onChange, value }: FormInputProps) => (
 	<FormControl
 		required={required}
 		size='lg'
@@ -21,6 +22,8 @@ const FormInput = ({ name, label, required, type, placeholder }: FormInputProps)
 			placeholder={placeholder}
 			name={name}
 			type={type}
+			value={value}
+			onChange={onChange}
 			variant='outlined'
 			sx={{fontFamily: 'Fira Sans, sans-serif'}}
 		/>
