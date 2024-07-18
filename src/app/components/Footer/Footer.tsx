@@ -189,6 +189,7 @@ const Footer = () => {
 						</Grid>
 
 						<Grid item>
+							<Link href='/Mentions-legales'>
 							<Typography
 								sx={{
 									color: '#828282',
@@ -196,8 +197,10 @@ const Footer = () => {
 								}}>
 								Mentions légales
 							</Typography>
+							</Link>
 						</Grid>
 						<Grid item>
+							<Link href='/Politique-de-confidentialite'>
 							<Typography
 								sx={{
 									color: '#828282',
@@ -205,6 +208,7 @@ const Footer = () => {
 								}}>
 								Politique de confidentialité
 							</Typography>
+							</Link>
 						</Grid>
 					</Grid>
 				</Grid>
