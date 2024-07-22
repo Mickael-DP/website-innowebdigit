@@ -31,8 +31,6 @@ const Contact: React.FC = () => {
 
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
-  const [variant, setVariant] = React.useState<VariantProp>('soft');
-
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -119,6 +117,7 @@ const Contact: React.FC = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           paddingTop: 5,
+          mx: {xs: 2},
         }}>
         <Container maxWidth='md'>
           <form onSubmit={handleSubmit}>
@@ -128,6 +127,7 @@ const Contact: React.FC = () => {
                 flexDirection: { xs: 'column', sm: 'row' },
                 justifyContent: 'space-between',
                 gap: { xs: 2, sm: 15 },
+              
                 marginBottom: 2,
               }}>
               <FormInput
@@ -211,17 +211,22 @@ const Contact: React.FC = () => {
               Envoyer votre demande
             </Button>
           </form>
-        </Container>
+         
+        </Container> 
       </Box>
+
       <Snackbar
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         open={snackbarOpen}
+        color='success'
+        variant='soft'
         autoHideDuration={6000}
         onClose={handleSnackbarClose}
       >
-        <Alert variant={variant} color="success" sx={{ width: '100%' }}>
-          Votre message a été envoyé avec succès !
-        </Alert>
+          Votre message a été envoyé avec succès ! Je vous répondrais dans les plus brefs délais.
       </Snackbar>
+
+     
     </Box>
   );
 };
