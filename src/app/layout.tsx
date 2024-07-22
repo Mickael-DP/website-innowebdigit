@@ -36,6 +36,7 @@ export default function RootLayout({
             `,
 					}}
 				/>
+        <meta name='robots 'content='index, follow' />
 			</Head>
 			<body className={inter.className}>
 				<noscript>
