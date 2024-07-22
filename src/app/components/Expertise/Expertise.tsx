@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import ExpertiseCard from '../ExpertiseCard/ExpertiseCard';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -18,37 +18,38 @@ const Expertise = () => {
 				flexDirection: 'column',
 				alignItems: 'center',
 				width: '100%',
-				paddingX: { xs: 7, sm: 25 },
+				paddingX: { xs: 7, sm: 10, md: 25 },
 			}}>
 			<Grid
 				container
 				spacing={5}
 				justifyContent='center'
 				mb={5}>
-					<Grid
-					sx={{display:{xs:'block',sm:'none',md:'none'}}}
+				<Grid
 					item
 					xs={12}
-					sm={6}
-					md={6}
+					sm={12}
+					md={12}
+					lg={6}
+					display={{ xs: 'block', md: 'none' }}
 					justifyContent='center'>
 					<Typography
 						variant='h4'
 						gutterBottom
-                        sx={{
-                            fontFamily: 'Fira Sans, sans-serif',
-                            fontWeight: '800',
-                        }}
+						sx={{
+							fontFamily: 'Fira Sans, sans-serif',
+							fontWeight: '800',
+						}}
 						color='white'>
 						Mon Expertise Web à votre disposition
 					</Typography>
 					<Typography
 						variant='body1'
 						gutterBottom
-                        sx={{
-                            fontFamily: 'Fira Sans, sans-serif',
-                            fontWeight: '500',
-                        }}
+						sx={{
+							fontFamily: 'Fira Sans, sans-serif',
+							fontWeight: '500',
+						}}
 						color='#63DFE6'>
 						Besoin d&apos;un développeur web spécialiste pour des missions
 						ponctuelles ? <br />
@@ -79,28 +80,27 @@ const Expertise = () => {
 				</Grid>
 				<Grid
 					item
-					sx={{display:{xs:'none',sm:'block',md:'block'}}}
 					xs={12}
-					sm={6}
 					md={6}
+					display={{ xs: 'none', md: 'block' }}
 					justifyContent='center'>
 					<Typography
 						variant='h4'
 						gutterBottom
-                        sx={{
-                            fontFamily: 'Fira Sans, sans-serif',
-                            fontWeight: '800',
-                        }}
+						sx={{
+							fontFamily: 'Fira Sans, sans-serif',
+							fontWeight: '800',
+						}}
 						color='white'>
 						Mon Expertise Web à votre disposition
 					</Typography>
 					<Typography
 						variant='body1'
 						gutterBottom
-                        sx={{
-                            fontFamily: 'Fira Sans, sans-serif',
-                            fontWeight: '500',
-                        }}
+						sx={{
+							fontFamily: 'Fira Sans, sans-serif',
+							fontWeight: '500',
+						}}
 						color='#63DFE6'>
 						Besoin d&apos;un développeur web spécialiste pour des missions
 						ponctuelles ? <br />

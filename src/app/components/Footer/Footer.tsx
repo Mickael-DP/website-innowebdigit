@@ -168,7 +168,12 @@ const Footer = () => {
 							</Link>
 						</Grid>
 						<Grid item>
+							<Link
+								href='https://g.co/kgs/ZzXe9gP'
+								target='_blank'
+								rel='noopener noreferrer'>
 							<Google sx={{ color: '#63DFE6' }} />
+							</Link>
 						</Grid>
 					</Grid>
 

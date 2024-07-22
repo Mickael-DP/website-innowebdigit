@@ -67,6 +67,7 @@ const Hero: React.FC = () => {
 						marginTop='30px'
 						sx={{
 							fontSize: { xs: '1rem', sm: '1.5rem', md: '2rem' },
+
 						}}>
 						Votre Développeur web freelance
 					</Typography>
@@ -79,7 +80,7 @@ const Hero: React.FC = () => {
 						sx={{
 							fontSize: { xs: '1rem', sm: '1.5rem', md: '2rem' },
 						}}>
-						Prêt a améliorer ton expérence digital en fonction de tes besoins
+						Prêt à améliorer ton expérence digital en fonction de tes besoins
 					</Typography>
 					<Box
 						sx={{
@@ -89,17 +90,16 @@ const Hero: React.FC = () => {
 							},
 							display: { xs: 'flex', sm: 'flex' },
 							flexDirection: { xs: 'column', sm: 'row' },
-							justifyContent: { sm: 'center' },
-							alignItems: { xs: 'center', sm: 'center' },
-							marginX: { xs: '30px', sm:'auto' },
+							justifyContent: { xs: 'center', sm: 'center' },
+							marginX: { xs: 'auto', sm:'auto' },
 						}}>
-							<Link href='#apropos'>
+						<Link href='#apropos'>
 						<Button
 							variant='solid'
 							size='lg'
 							sx={{
 								backgroundColor: '#181818',
-								mr: 5,
+								mr: { xs: 0, sm: 5},
 								fontSize: { xs: '0.8rem', sm: '1rem', md: '1rem' },
 								'&:hover': {
 											backgroundColor: '#59E2E8',

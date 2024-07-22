@@ -24,7 +24,7 @@ interface Props {
 	window?: () => Window;
 }
 
-const drawerWidth = 240;
+const drawerWidth = 400;
 const navItems = [
 	{ text: 'Accueil', href: '#' },
 	{ text: 'Expertise', href: '#expertise' },
@@ -42,19 +42,22 @@ const Navbar = (props: Props) => {
 	const drawer = (
 		<Box
 			onClick={handleDrawerToggle}
-			sx={{ textAlign: 'center', backgroundColor: '#000', color: '#fff' }}>
-			<Box sx={{ display: 'flex', justifyContent: 'center' }}>
-				<img
+			sx={{ textAlign: 'center', backgroundColor: '#000', color: '#fff' , marginTop: '20px'}}>
+			<Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
+			<Link href='/'>
+				<Box
+					component='img'
 					src={logoSite.src}
 					alt='logo'
-					style={{ width: '180px', height: 'auto' }}
+					sx={{ width: '180px', height: 'auto' }}
 				/>
+				</Link>
 			</Box>
-			<Divider sx={{ backgroundColor: 'white', mx: 3 }} />
-			<List>
+			<Divider sx={{ backgroundColor: 'white', mx: 3}} />
+			<List >
 				{navItems.map((item) => (
 					<ListItem key={item.text} disablePadding>
-						<ListItemButton sx={{ textAlign: 'center' }}>
+						<ListItemButton sx={{ textAlign: 'center', display:'flex', justifyContent:'center' }}>
 							<Link href={`/${item.href.toLowerCase().replace(/\s+/g, '')}`}>
 								<ListItemText primary={item.text} sx={{ color: '#fff' }} />
 							</Link>
@@ -62,11 +65,13 @@ const Navbar = (props: Props) => {
 					</ListItem>
 				))}
 			</List>
-			<Divider sx={{ backgroundColor: 'white', mb: 2, mx: 3 }} />
+			<Divider sx={{ backgroundColor: 'white', mb: 3, mx: 3 }} />
 			<Box sx={{ display: 'flex', justifyContent: 'center' }}>
-				<Button variant='solid' sx={{ backgroundColor: '#59E2E8' }}>
-					Contact
+				<Link href={`/#contact`}>
+				<Button variant='solid' sx={{ backgroundColor: '#59E2E8', color:'#000000'}}>
+					Me Contacter - <ArticleIcon />
 				</Button>
+				</Link>
 			</Box>
 		</Box>
 	);
@@ -81,19 +86,24 @@ const Navbar = (props: Props) => {
 				<Toolbar
 					sx={{
 						display: 'flex',
-						justifyContent: { sm: 'space-between', xs: 'space-between' },
+						justifyContent: { sm: 'space-between', xs: 'space-between', md: 'space-between' },
 						alignItems: { sm: 'center', xs: 'center' },
-						mx: { sm: 21, xs: 1 },
+						mx: { sm: 0, xs: 1, md: 21 },
+						padding: { sm: 3, xs: 1, md: 1 },
 					}}>
-					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-						<img
+					<Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
+						<Link href='/'>
+						
+						<Box
+							component='img'
 							src={logoSite.src}
 							alt='logo'
-							style={{ width: '400px', height: 'auto' }}
+							sx={{ width: {sm: '200px', md:'400px'}, height: 'auto' }}
 						/>
+						</Link>
 					</Box>
 
-					<Box sx={{ mr: 1, display: { sm: 'none', xs: 'block' } }}>
+					<Box sx={{ mr: 1, display: { md:'none' ,sm: 'block', xs: 'block' } }}>
 						<IconButton
 							color='inherit'
 							aria-label='open drawer'
@@ -103,15 +113,16 @@ const Navbar = (props: Props) => {
 						</IconButton>
 					</Box>
 
-					<Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-						<img
+					<Box sx={{ display: { xs: 'block', sm: 'block', md:'none' } }}>
+						<Box
+							component='img'
 							src={logoSite.src}
 							alt='logo'
-							style={{ width: '170px', height: 'auto' }}
+							sx={{ width: {xs:'170px', sm: '250px'}, height: 'auto' }}
 						/>
 					</Box>
 
-					<Box sx={{ display: { xs: 'none', sm: 'block' },  }}>
+					<Box sx={{ display: { xs: 'none', sm:'none', md: 'block' },  }}>
 						{navItems.map((item) => (
 							<Link key={item.text} href={`/${item.href.toLowerCase().replace(/\s+/g, '')}`}>
 								<Button
@@ -163,7 +174,7 @@ const Navbar = (props: Props) => {
 						keepMounted: true, // Better open performance on mobile.
 					}}
 					sx={{
-						display: { xs: 'block', sm: 'none' },
+						display: { xs: 'block', sm: 'block', md:'none' },
 						'& .MuiDrawer-paper': {
 							boxSizing: 'border-box',
 							width: drawerWidth,
