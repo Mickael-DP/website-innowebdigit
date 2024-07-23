@@ -100,6 +100,7 @@ const Hero: React.FC = () => {
 							sx={{
 								backgroundColor: '#181818',
 								mr: { xs: 0, sm: 5},
+								mb: { xs: 2, sm: 0},
 								fontSize: { xs: '0.8rem', sm: '1rem', md: '1rem' },
 								'&:hover': {
 											backgroundColor: '#59E2E8',

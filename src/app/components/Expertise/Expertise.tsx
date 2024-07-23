@@ -18,12 +18,13 @@ const Expertise = () => {
 				flexDirection: 'column',
 				alignItems: 'center',
 				width: '100%',
-				paddingX: { xs: 7, sm: 10, md: 25 },
+				paddingX: { xs: 7, sm: 10, md: 8, lg: 11, xl: 21},
 			}}>
 			<Grid
 				container
 				spacing={5}
 				justifyContent='center'
+				alignContent='center'
 				mb={5}>
 				<Grid
 					item
@@ -31,8 +32,7 @@ const Expertise = () => {
 					sm={12}
 					md={12}
 					lg={6}
-					display={{ xs: 'block', md: 'none' }}
-					justifyContent='center'>
+					display={{ xs: 'block', md: 'block', lg: 'none' }}>
 					<Typography
 						variant='h4'
 						gutterBottom
@@ -60,7 +60,12 @@ const Expertise = () => {
 					item
 					xs={12}
 					sm={6}
-					md={3}>
+					md={6}
+					lg={3}
+					sx={{
+						display: 'flex',
+						justifyContent: 'center',
+					}}>
 					<ExpertiseCard
 						icon={<AutoAwesomeIcon sx={{ fontSize: '3em' }} />}
 						title='Développement Front-end'
@@ -71,7 +76,12 @@ const Expertise = () => {
 					item
 					xs={12}
 					sm={6}
-					md={3}>
+					md={6}
+					lg={3}
+					sx={{
+						display: 'flex',
+						justifyContent: 'center',
+					}}>
 					<ExpertiseCard
 						icon={<SettingsIcon sx={{ fontSize: '3em' }} />}
 						title='Développement Back-end'
@@ -82,7 +92,8 @@ const Expertise = () => {
 					item
 					xs={12}
 					md={6}
-					display={{ xs: 'none', md: 'block' }}
+					lg={6}
+					display={{ xs: 'none', md: 'none', lg: 'block' }}
 					justifyContent='center'>
 					<Typography
 						variant='h4'
@@ -116,7 +127,12 @@ const Expertise = () => {
 					item
 					xs={12}
 					sm={6}
-					md={3}>
+					md={6}
+					lg={3}
+					sx={{
+						display: 'flex',
+						justifyContent: 'center',
+					}}>
 					<ExpertiseCard
 						icon={<BrushIcon sx={{ fontSize: '3em' }} />}
 						title='UX / UI'
@@ -127,7 +143,12 @@ const Expertise = () => {
 					item
 					xs={12}
 					sm={6}
-					md={3}>
+					md={6}
+					lg={3}
+					sx={{
+						display: 'flex',
+						justifyContent: 'center',
+					}}>
 					<ExpertiseCard
 						icon={<SmartphoneIcon sx={{ fontSize: '3em' }} />}
 						title='Responsive'
@@ -138,7 +159,12 @@ const Expertise = () => {
 					item
 					xs={12}
 					sm={6}
-					md={3}>
+					md={6}
+					lg={3}
+					sx={{
+						display: 'flex',
+						justifyContent: 'center',
+					}}>
 					<ExpertiseCard
 						icon={<SearchIcon sx={{ fontSize: '3em' }} />}
 						title='SEO'
@@ -149,7 +175,12 @@ const Expertise = () => {
 					item
 					xs={12}
 					sm={6}
-					md={3}>
+					md={6}
+					lg={3}
+					sx={{
+						display: 'flex',
+						justifyContent: 'center',
+					}}>
 					<ExpertiseCard
 						icon={<BuildIcon sx={{ fontSize: '3em' }} />}
 						title='CMS'

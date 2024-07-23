@@ -20,8 +20,8 @@ const TechCard: React.FC<TechCardProps> = ({ card }) => {
 			variant='solid'
 			sx={{
 				backgroundColor: '#181818',
-				width: { xs: '150px', sm: '200px', md: '230px' },
-				height: { xs: '90px', sm: '120px', md: '135px' },
+				width: { xs: '150px', sm: '200px', md: '210px', lg: '230px' },
+				height: { xs: '90px', sm: '120px', md: '115px', lg: '130px' },
 				display: 'flex',
 				justifyContent: 'center',
 				alignItems: 'center',

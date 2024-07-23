@@ -88,7 +88,7 @@ const Navbar = (props: Props) => {
 						display: 'flex',
 						justifyContent: { sm: 'space-between', xs: 'space-between', md: 'space-between' },
 						alignItems: { sm: 'center', xs: 'center' },
-						mx: { sm: 0, xs: 1, md: 21 },
+						mx: { sm: 0, xs: 1, md: 5, lg: 9, xl: 21},
 						padding: { sm: 3, xs: 1, md: 1 },
 					}}>
 					<Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
@@ -98,7 +98,7 @@ const Navbar = (props: Props) => {
 							component='img'
 							src={logoSite.src}
 							alt='logo'
-							sx={{ width: {sm: '200px', md:'400px'}, height: 'auto' }}
+							sx={{ width: {sm: '200px', md:'250px', lg:'280px', xl: '350px'}, height: 'auto' }}
 						/>
 						</Link>
 					</Box>

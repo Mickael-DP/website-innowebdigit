@@ -21,15 +21,15 @@ const About = () => {
 			id='apropos'
 			sx={{
 				display: 'flex',
-				flexDirection: { xs: 'column', md: 'row', sm: 'column' },
-				justifyContent: { xs: 'center', md: 'space-between' },
-				paddingX: { md: 25, sm: 5 },
+				flexDirection: { xs: 'column', sm: 'column',  md: 'column', lg: 'row' },
+				justifyContent: { xs: 'center', md: 'center', lg: 'space-between' },
+				paddingX: { xs: 7, sm: 10, md: 8, lg: 11, xl: 21},
 				mt: 8,
 				width: '100%',
 			}}>
 			<Box
 				sx={{
-					paddingRight: { xs: 0, md: 15 },
+					paddingRight: { xs: 0, lg: 15, md: 0 },
 					mx: { xs: 5, md: 0 },
 					display: 'flex',
 					flexDirection: 'column',
@@ -131,12 +131,12 @@ const About = () => {
 						sx={{
 							display: { xs: 'flex', md: 'none' },
 							backgroundColor: '#59E2E8',
-							padding: { xs: 1, sm: 2, md: 1},
+							padding: {xs:1, sm: 1, md: 1},
 							color: 'black',
 							fontFamily: 'Fira Sans, sans-serif',
 							fontWeight: 'bold',
 							mr: 2,
-							fontSize: { xs: '0.8rem', sm: '1rem', md: '0.8rem' },
+							fontSize: { xs: '0.8rem', sm: '0.8rem', md: '0.8rem' },
 							'&:hover': {
 								backgroundColor: '#59E2E8',
 								color: '#ffffff',
@@ -180,7 +180,7 @@ const About = () => {
 								padding: {xs:1, sm: 1, md: 1},
 								color: '#59E2E8',
 								fontWeight: 'bold',
-								fontSize: { xs: '0.8rem', sm: '1rem', md: '0.8rem' },
+								fontSize: { xs: '0.8rem', sm: '0.8rem', md: '0.8rem' },
 								'&:hover': {
 									backgroundColor: '#59E2E8',
 									color: '#ffffff',

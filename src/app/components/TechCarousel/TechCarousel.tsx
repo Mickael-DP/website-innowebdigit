@@ -35,11 +35,12 @@ const TechCarousel = () => {
 	const theme = useTheme();
 	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 	const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+	const isDesktop = useMediaQuery(theme.breakpoints.between('md', 'lg'));
 
 	const settings = {
 		dots: false,
 		infinite: true,
-		slidesToShow: isMobile ? 2 : isTablet ? 3 : 5,
+		slidesToShow: isMobile ? 2 : isTablet ? 3 : isDesktop ? 4 : 5,
 		slidesToScroll: 1,
 		autoplay: true,
 		speed: 5000,
