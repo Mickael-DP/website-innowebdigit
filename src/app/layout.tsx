@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Mickael DALLE PASQUALINE-InnoWeb Digital',
-	description: "Bienvenue sur le site d'InnoWeb Digital",
+	description:
+		"Bienvenue sur InnoWeb Digital. Mickael DALLE PASQUALINE, développeur web freelance passionné avec 5 ans d'études en informatique.",
 	icons: [
 		{
 			rel: 'icon',
@@ -25,6 +26,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<Head>
+				<meta
+					name='viewport'
+					content='width=device-width, initial-scale=1'
+				/>
 				<script
 					dangerouslySetInnerHTML={{
 						__html: `
@@ -36,7 +41,14 @@ export default function RootLayout({
             `,
 					}}
 				/>
-        <meta name='robots 'content='index, follow' />
+				<meta
+					name='robots '
+					content='index, follow'
+				/>
+				<link
+					rel='canonical'
+					href='https://www.innowebdigital.com/'
+				/>
 			</Head>
 			<body className={inter.className}>
 				<noscript>
